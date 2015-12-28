@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		2C26384F1C31AB1B00413E49 /* Node.java */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.java; path = Node.java; sourceTree = "<group>"; };
+		2C2638501C31AD0A00413E49 /* NodeList.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = NodeList.java; sourceTree = "<group>"; };
+		2C2638511C31B9E600413E49 /* TestNode.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = TestNode.java; sourceTree = "<group>"; };
 		2CF39D421C319CC900BE0641 /* HelloWorld.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; path = HelloWorld.java; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -15,12 +18,29 @@
 			isa = PBXGroup;
 			children = (
 				2CF39D421C319CC900BE0641 /* HelloWorld.java */,
+				2C26384F1C31AB1B00413E49 /* Node.java */,
+				2C2638501C31AD0A00413E49 /* NodeList.java */,
+				2C2638511C31B9E600413E49 /* TestNode.java */,
 			);
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXLegacyTarget section */
+		2C2638521C31BBC200413E49 /* TestNode */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION) $(TARGETNAME).java";
+			buildConfigurationList = 2C2638531C31BBC200413E49 /* Build configuration list for PBXLegacyTarget "TestNode" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/javac;
+			buildWorkingDirectory = "";
+			dependencies = (
+			);
+			name = TestNode;
+			passBuildSettingsInEnvironment = 1;
+			productName = TestNode;
+		};
 		2CF39D3C1C319C7C00BE0641 /* HelloWorld */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "$(ACTION) $(TARGETNAME).java";
@@ -44,6 +64,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Raghunath T";
 				TargetAttributes = {
+					2C2638521C31BBC200413E49 = {
+						CreatedOnToolsVersion = 7.2;
+					};
 					2CF39D3C1C319C7C00BE0641 = {
 						CreatedOnToolsVersion = 7.2;
 					};
@@ -61,11 +84,35 @@
 			projectRoot = "";
 			targets = (
 				2CF39D3C1C319C7C00BE0641 /* HelloWorld */,
+				2C2638521C31BBC200413E49 /* TestNode */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin XCBuildConfiguration section */
+		2C2638541C31BBC200413E49 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUGGING_SYMBOLS = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2C2638551C31BBC200413E49 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		2CF39D3D1C319C7C00BE0641 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -165,6 +212,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2C2638531C31BBC200413E49 /* Build configuration list for PBXLegacyTarget "TestNode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2C2638541C31BBC200413E49 /* Debug */,
+				2C2638551C31BBC200413E49 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		2CF39D3B1C319C7C00BE0641 /* Build configuration list for PBXProject "JavaDataStructures" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
