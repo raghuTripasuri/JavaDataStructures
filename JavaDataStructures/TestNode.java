@@ -1,3 +1,4 @@
+
 public class TestNode{
 
     public static void main(String args[]){
@@ -24,14 +25,25 @@ public class TestNode{
         nList.delete(96);
         nList.printAll();
         
+        nList.deleteFromTail();
+        nList.printAll();
+        
+        nList.deleteFromHead();
+        nList.printAll();
+        
+        
         Node nj_new  = new Node(38);
         NodeList nList_new = new NodeList();
         nList_new.addToHead(nj_new.info);
         
         nList_new.printAll();
         
-        nList_new.delete(38);
+        //nList_new.delete(38);
+        //nList_new.deleteFromHead();
+        nList_new.deleteFromTail();
         nList_new.printAll();
+        
+        
     }
 
 }
