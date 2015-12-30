@@ -22,6 +22,8 @@ public class EmpQueueManager {
 		}
 		
 		System.out.println(queue.toString());
+		//System.out.println("Today's date is " + new java.util.Date());
+		
 	}
 	
 }
