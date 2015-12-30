@@ -12,14 +12,15 @@ public class DllTestNode{
         
         //Add the head element
         nList.addToHead(nj.info);
-        
+          
+        System.out.print("Starting to execute the process");
         //Use methods "add to head" and "add to tail" to build up the double linked lists
-        for(int i=100; i < 121; i++){
-            nList.addToTail(new Integer(i));
+        for(long i=100; i < 121; i++){
+            nList.addToTail(new Long(i));
         }
         
-        for(int i=99; i >79; i--){
-        	nList.addToHead(new Integer(i));
+        for(long i=99; i >79; i--){
+        	nList.addToHead(new Long(i));
         }
         
         //Verify the list built
