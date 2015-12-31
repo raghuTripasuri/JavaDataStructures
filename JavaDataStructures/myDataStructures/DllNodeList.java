@@ -1,3 +1,4 @@
+package myDataStructures;
 /**
  * This class helps in creating and managing the Double linked list
  * @author raghunatht
@@ -79,6 +80,7 @@ public class DllNodeList {
         }
         return element;
     }
+
     
     public void printAll(){
         
@@ -109,7 +111,15 @@ public class DllNodeList {
         return(result);
     }
     
-    public void delete(Object el){ //method assumes and deletes only one element, the first match.
+    public DllNode getHead() {
+		return head;
+	}
+
+	public DllNode getTail() {
+		return tail;
+	}
+
+	public void delete(Object el){ //method assumes and deletes only one element, the first match.
         
         DllNode tmp, bufElement;
         Object delElement;

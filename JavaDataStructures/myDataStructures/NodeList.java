@@ -1,3 +1,4 @@
+package myDataStructures;
 /**
  Public class NodeList, which is used to manage the linked lists
  Attributes head and tail capture the first and last elements of the list

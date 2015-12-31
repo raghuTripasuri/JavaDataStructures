@@ -12,6 +12,7 @@ public class Withdraw extends Transaction {
 		this.txnCustomer = txnCustomer;
 		this.modeOfWithdrawal = withdrawMode;
 		this.txnOps = new Debit(txnAmt);
+		this.txnAccount.addOperation(this.txnOps);
 	}
 
 	public String getModeOfWithdrawal() {
@@ -20,6 +21,12 @@ public class Withdraw extends Transaction {
 
 	public void setModeOfWithdrawal(String modeOfWithdrawal) {
 		this.modeOfWithdrawal = modeOfWithdrawal;
+	}
+
+	@Override
+	public void updateAccountBalance() {
+		// TODO Auto-generated method stub
+		super.updateAccountBalance();
 	}
 
 	@Override

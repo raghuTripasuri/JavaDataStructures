@@ -62,6 +62,12 @@ public class Transaction {
 	public void setTxnOps(Operation txnOps) {
 		this.txnOps = txnOps;
 	}
+	
+	public void updateAccountBalance(){
+		double balance = this.txnAccount.getAccountBalance();
+		balance = balance + this.txnOps.getAmount();
+		this.txnAccount.setAccountBalance(balance);
+	}
 
 	@Override
 	public String toString() {

@@ -12,10 +12,17 @@ public class Deposit extends Transaction {
 		this.txnCustomer = txnCustomer;
 		this.modeOfDeposit = depositMode;
 		this.txnOps = new Credit(txnAmt);
+		this.txnAccount.addOperation(this.txnOps);
 	}
 
 	public String getModeOfDeposit() {
 		return modeOfDeposit;
+	}
+
+	@Override
+	public void updateAccountBalance() {
+		// TODO Auto-generated method stub
+		super.updateAccountBalance();
 	}
 
 	public void setModeOfDeposit(String modeOfDeposit) {

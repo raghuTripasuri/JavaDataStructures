@@ -16,6 +16,9 @@ public class FundsTransfer extends Transaction {
 		this.txnOps = new Operation[2];
 		txnOps[0] = new Debit(txnAmt);
 		txnOps[1] = new Credit(txnAmt);
+		
+		this.fromAccount.addOperation(this.txnOps[0]);
+		this.toAccount.addOperation(this.txnOps[1]);
 	}
 
 	public Account getFromAccount() {
@@ -48,6 +51,12 @@ public class FundsTransfer extends Transaction {
 
 	public void setTxnOperations(Operation[] txnOps) {
 		this.txnOps = txnOps;
+	}
+
+	@Override
+	public void updateAccountBalance() {
+		this.fromAccount.setAccountBalance(this.fromAccount.getAccountBalance() + this.getTxnOperations()[0].getAmount());
+		this.toAccount.setAccountBalance(this.toAccount.getAccountBalance() + this.getTxnOperations()[1].getAmount());	
 	}
 	
 }

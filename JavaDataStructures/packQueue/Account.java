@@ -6,6 +6,7 @@ public class Account {
 	String accountType;
 	double accountBalance;
 	Customer customer;
+	Operation acctOps[];
 	
 	public Account(long accountNo, String accountType) {
 		super();
@@ -43,6 +44,32 @@ public class Account {
 
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
+	}
+
+	public void addOperation(Operation ops){
+		Operation[] currentOps = getAcctOps();
+		Operation[] newOps;
+		if (currentOps != null){
+			int size = currentOps.length;
+			newOps = new Operation[size + 1];
+			for (int i=0; i< size; i++){
+				newOps[i] = currentOps[i];
+			}
+			newOps[size] = ops;
+		} else {
+			newOps = new Operation[1];
+			newOps[0] = ops;
+		}
+		setAcctOps(newOps);
+		
+	}
+	
+	public Operation[] getAcctOps() {
+		return acctOps;
+	}
+
+	public void setAcctOps(Operation[] acctOps) {
+		this.acctOps = acctOps;
 	}
 
 	@Override

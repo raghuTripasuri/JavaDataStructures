@@ -57,6 +57,13 @@ public class Customer {
 		this.totalNetWorth = totalNetWorth;
 	}
 
+	public void updateTotalNetWorth(){
+		double balance =0;
+		for (Account acct : this.accounts){
+			balance = balance + acct.getAccountBalance();
+		}
+		setTotalNetWorth(balance);
+	}
 	
 	public Account[] getAccounts() {
 		return accounts;

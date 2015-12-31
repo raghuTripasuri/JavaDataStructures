@@ -1,3 +1,4 @@
+package myDataStructures;
 /**
  Public class Node, which represents each element in the linked list.
  Attribute info captures basic information 

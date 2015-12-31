@@ -1,3 +1,4 @@
+package myDataStructures;
 /**
  * Double linked list node is created here. It has reference to previous and next as well
  * @author raghunatht
