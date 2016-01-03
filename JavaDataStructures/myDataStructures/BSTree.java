@@ -50,8 +50,9 @@ public class BSTree {
 		
 	}
 	
-	public BSTreeNode search(BSTreeNode p, Object element){
-		BSTreeNode newElement = new BSTreeNode(element, null, null, -1);
+	public BSTreeNode search(BSTreeNode p, int id){
+		Integer element = new Integer(id);
+		BSTreeNode newElement = new BSTreeNode(element, null, null, id);
 		while (p != null){
 			if (p.getInfo().equals(element)){
 				return p;
@@ -80,23 +81,45 @@ public class BSTree {
 		}
 		
 	}
-	public void preorder(){
-		preorder(root);
+	
+	public void preorder( BSTreeNode p){
+		if(p != null){
+			this.visit(p);
+			preorder(p.getLeft());
+			preorder(p.getRight());
+		}
 	}
-	protected void preorder(BSTreeNode p){
-		
-	}
-	public void inorder(){
-		inorder(root);
-	}
+
 	protected void inorder(BSTreeNode p){
+		if(p != null){
+			inorder(p.getLeft());
+			visit(p);
+			inorder(p.getRight());
+		}
 		
 	}
 	protected void postorder(BSTreeNode p){
-		
+		if(p != null){
+			postorder(p.getLeft());
+			postorder(p.getRight());
+			visit(p);
+		}
 	}
-	public void postorder(){
-		postorder(root);
+	public void balance(int[] data, int first, int last){
+		
+		int element = -1;
+		
+		if(first <= last){
+			int middle = (first + last)/2;
+			element = data[middle];
+			this.insert(new Integer(element), element);
+			balance(data, first, middle -1);
+			balance(data, middle + 1, last);
+		}
+	}
+
+	public void cleanup(BSTreeNode p){
+		this.setRoot(null);
 	}
 	
 }
